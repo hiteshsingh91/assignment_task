@@ -6,8 +6,8 @@ const
   routes     = require('./routes'),
   mongo      = require('mongodb').MongoClient,
   objectID   = require('mongodb').ObjectID,
-  PORT       = process.env.PORT || 3000,
-  mongoUrl   = process.env.MONGOURL || 'mongodb://localhost:27017/hdfc';
+  PORT       = 3000,
+  mongoUrl   = 'mongodb://localhost:27017/hdfc';
 
 mongo.connect(mongoUrl, { useNewUrlParser: true }, function (err, db) {
   if (err) {
@@ -16,9 +16,7 @@ mongo.connect(mongoUrl, { useNewUrlParser: true }, function (err, db) {
 
   global.mongoClient  = db;
   global.objectID     = objectID;
-  global.userDB       = process.env.userDB || 'users';
-  global.roomsDB      = process.env.roomsDB || 'rooms';
-  global.bookingDB    = process.env.bookingDB || 'bookinghistory';
+  global.userDB       = 'users'
 });
 
 global.jwtTokenExpiry = 900000;
