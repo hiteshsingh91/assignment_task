@@ -14,7 +14,7 @@ router.get('/getUserDetail',
         expiresIn: jwtTokenExpiry  
       };
       try {
-        result = jwt.verify(token, (process.env.JWT_SECRET || jwtSecretKey), options);
+        result = jwt.verify(token, jwtSecretKey, options);
         req.data = result;
         next();
       } catch (err) {

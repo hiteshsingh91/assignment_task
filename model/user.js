@@ -35,8 +35,8 @@ module.exports = {
 
       //CREATE USER TOKEN
       const payload = { userName: userData.name, email : userData.email };
-      const options = { expiresIn: '30000'};
-      const secret = process.env.JWT_SECRET || 'mysecretkey';
+      const options = { expiresIn: jwtTokenExpiry};
+      const secret = jwtSecretKey;
       const token = jwt.sign(payload, secret, options);
       
       return token;

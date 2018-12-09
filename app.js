@@ -17,7 +17,7 @@ mongo.connect(mongoUrl, { useNewUrlParser: true }, function (err, db) {
   global.objectID     = objectID;
   global.userDB       = 'users';
 });
-
+//15 mins TTL for Token
 global.jwtTokenExpiry = 900000;
 global.jwtSecretKey = 'mysecretkey';
 app.use(bodyParser.json());
