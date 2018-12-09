@@ -13,10 +13,9 @@ mongo.connect(mongoUrl, { useNewUrlParser: true }, function (err, db) {
   if (err) {
     console.log(err);
   }
-
   global.mongoClient  = db;
   global.objectID     = objectID;
-  global.userDB       = 'users'
+  global.userDB       = 'users';
 });
 
 global.jwtTokenExpiry = 900000;
