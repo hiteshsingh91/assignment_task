@@ -10,7 +10,7 @@
   "author": "Hitesh Singh",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^2.0.1",
+    "bcrypt": "^5.0.0",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.4.0",
     "mongodb": "^2.2.33"
